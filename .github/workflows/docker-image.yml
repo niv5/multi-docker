@@ -20,7 +20,7 @@ jobs:
       run: docker run -e CI=true nivankovic/react-test npm test -- --coverage
   
   deploy:
-  
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Chekout Latest Repo
